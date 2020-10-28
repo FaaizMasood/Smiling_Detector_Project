@@ -40,7 +40,7 @@ while True:
         # for smiles
         # we blur the frame to detect the smile, minNeighbors a lot of redundant rectandles for it to be a smile
         smiles = smile_detector.detectMultiScale(
-            face_grayscale, scaleFactor=1.7, minNeighbors=20)
+            face_grayscale, scaleFactor=2.1, minNeighbors=20)
         # find all the smiles in the face
         # for (x_, y_, w_, h_) in smiles:
         # draw all the smiles rectangles around the face
@@ -51,7 +51,7 @@ while True:
 
         # label the smiling
         if len(smiles) > 0:
-            cv2.putText(frame, 'WHY SO SERIOUS!!???', (x, y+h+40), fontScale=3,
+            cv2.putText(frame, 'I AM SMILING!!', (x, y+h+40), fontScale=3,
                         fontFace=cv2.FONT_HERSHEY_PLAIN, color=(255, 255, 255))
 
     # show the current frame
